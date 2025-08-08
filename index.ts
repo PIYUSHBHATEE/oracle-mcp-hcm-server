@@ -73,11 +73,12 @@ app.use(
           approvalStatusCd: z.string(),
           startDateDuration: z.string(),
           endDateDuration: z.string(),
+          employeeToken: z.string()
         }
       },
       async (args) => {
         const response = await fetch(
-          `${process.env.ORACLE_BASE_URL}/ADQ_CREATE_ABSENCE_SYNC/1.0/createAbsence`,
+          `${process.env.ORACLE_BASE_URL}/ADQ_CREATE_ABSENCE_SYNC/1.0/createAbsence?Authorization=Basic%20${encodeURIComponent(args.employeeToken)}`,
           {
             method: "POST",
             headers: {
