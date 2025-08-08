@@ -62,7 +62,7 @@ app.use(
       "createLeaveBalance",
       {
         title: "Create Leave Entry",
-        description: "Submit a leave request for an employee.",
+        description: "Registers a leave request for an employee, including leave duration, type, status, and approval details. Supports full-day and partial-day leaves across a specified date range.",
         inputSchema: {
           personNumber: z.string(),
           employer: z.string(),
