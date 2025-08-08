@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "*",
-    optionsSuccessStatus: 200, // For legacy browser support
+    optionsSuccessStatus: 200, // For legacy browser
   }),
 );
 
